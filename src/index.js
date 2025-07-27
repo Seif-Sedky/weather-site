@@ -1,6 +1,6 @@
 import './index.css';
 import { getData } from './utils/api';
-import { displayContent } from './utils/content-display';
+import { displayContent,updateColours,updateImages } from './utils/content-display';
 import { displayError } from './utils/error-display';
 
 function DOM() {
@@ -14,7 +14,7 @@ function DOM() {
     const days = document.querySelectorAll('.day');
     const minMaxTemps = document.querySelectorAll('.min-max-temp');
 
-    return { input, summary, degree, feel, wind, humidity, days, minMaxTemps,address };
+    return { input, summary, degree, feel, wind, humidity, days, minMaxTemps, address };
 }
 
 
@@ -28,7 +28,11 @@ function initializeEventListener() {
                 getData(value)
                     .then(data => resolve(data))
                     .catch(error => reject(error));
-            }).then(response => displayContent(response, dom))
+            }).then(response => {
+                displayContent(response, dom)
+                updateImages(response, dom)
+                updateColours(response, dom)
+            })
                 .catch(error => displayError(error, dom));
 
         }
