@@ -114,7 +114,7 @@ body {
     gap: 0.7vw;
 }
 
-.details-info{
+.details-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -127,3 +127,20 @@ body {
 .info .weather-icon {
     margin: auto;
 }
+
+
+
+.forecast-wrapper {
+
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+}
+
+.forecast-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
