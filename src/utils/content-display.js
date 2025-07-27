@@ -23,7 +23,13 @@ function displayForecastContent(data, dom) {
         day.textContent = nextDays[i++];
     }
 
+    i = 0;
     // Update minmax
+    console.log(dom.minMaxTemps.length)
+    for (let minmax of dom.minMaxTemps) {
+        minmax.textContent = `${fahrenheitToCelsius(data.days[i].tempmin)}-${fahrenheitToCelsius(data.days[i].tempmax)}`;
+        i++;
+    }
 }
 
 function getNextThreeDays() {

@@ -15,7 +15,7 @@ function extractData(response) {
     let humidity = response.currentConditions.humidity;
     let address = response.resolvedAddress;
     let temp = response.currentConditions.temp
-    let days = [response.days[1], response.days[2], response[3]];
+    let days = [response.days[1], response.days[2], response.days[3]];
     return { feel, condition, humidity, address, days, temp, wind };
 }
 
