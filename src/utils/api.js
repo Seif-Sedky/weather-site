@@ -8,13 +8,15 @@ async function requestData(city) {
 }
 
 function extractData(response) {
-    let description = response.description;
-    let feelsLike = response.currentConditions.feelslike;
+    console.log(response);
+    let wind = response.currentConditions.windspeed;
+    let feel = response.currentConditions.feelslike;
     let condition = response.currentConditions.conditions;
     let humidity = response.currentConditions.humidity;
-    let address = response.address;
+    let address = response.resolvedAddress;
+    let temp = response.currentConditions.temp
     let days = [response.days[1], response.days[2], response[3]];
-    return { description, feelsLike, condition, humidity, address, days };
+    return { feel, condition, humidity, address, days, temp, wind };
 }
 
 export function getData(city) {

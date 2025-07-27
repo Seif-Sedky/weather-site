@@ -5,6 +5,7 @@ import { displayError } from './utils/error-display';
 
 function DOM() {
     const input = document.querySelector('.search-bar');
+    const address = document.querySelector('.country')
     const summary = document.querySelector('.summary');
     const degree = document.querySelector('.degree');
     const feel = document.querySelector('.feel');
@@ -13,7 +14,7 @@ function DOM() {
     const days = document.querySelectorAll('.day');
     const minMaxTemps = document.querySelectorAll('.min-max-temp');
 
-    return { input, summary, degree, feel, wind, humidity, days, minMaxTemps };
+    return { input, summary, degree, feel, wind, humidity, days, minMaxTemps,address };
 }
 
 
@@ -27,8 +28,8 @@ function initializeEventListener() {
                 getData(value)
                     .then(data => resolve(data))
                     .catch(error => reject(error));
-            }).then(response => displayContent(response, dom)) 
-                .catch(displayError(error, dom));
+            }).then(response => displayContent(response, dom))
+                .catch(error => displayError(error, dom));
 
         }
     });
