@@ -1,0 +1,28 @@
+/* style.css */
+
+:root {
+    --primary-bg: #080822; /* Dark Blue/Purple */
+    --text-color: #e0e0e0; /* Light Gray */
+    --heading-color: #ffffff; /* White */
+    --border-color: #2e3a59; /* Darker border */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--primary-bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.weather-dashboard {
+    background-color: rgba(0, 10, 65, 0.9); /* Semi-transparent dark background */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
