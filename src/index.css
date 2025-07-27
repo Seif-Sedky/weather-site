@@ -26,7 +26,7 @@ body {
     min-height: 100vh;
 }
 
-.weather-icon{
+.weather-icon {
     width: 50px;
     height: 50px;
 }
@@ -43,5 +43,34 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 50px;
 
+}
+
+
+.search-bar {
+    width: 70%;
+    background-color: #080822;
+    border: 0px solid black;
+    border-radius: 12px;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 10px 30px var(--shadow-color);
+
+    transition: all 0.3s ease 0;
+
+}
+
+.search-bar::placeholder {
+    color: #e0e0e0;
+    opacity: 0.2;
+}
+
+.search-bar:focus {
+    outline: none;
+    border: 2px solid rgb(0, 85, 124);
 }
