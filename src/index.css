@@ -234,3 +234,7 @@ body {
     color: var(--accent-color);
     letter-spacing: 1px;
 }
+
+.summary{
+    margin-bottom: 10px;
+}
