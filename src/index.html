@@ -10,18 +10,22 @@
 <body>
     <div class="weather-dashboard">
         <input type="text" class="search-bar" placeholder="Search city">
-        <div class="main-info-wrapper">
-            <img src="imgs/cloud.png" alt="weather icon" class="weather-icon">
-            <div class="main-info">
-                <p class="summary"></p>
-                <h1 class="country"></h1>
+        <div class="info-wrapper">
+            <div class="info">
+                <img src="imgs/cloud.png" alt="weather icon" class="weather-icon">
+                <div class="main-info">
+                    <p class="summary">TEST SUMMARY</p>
+                    <h1 class="country">CAIRO, EGYPT</h1>
+                </div>
                 <div class="details">
-                    <span class="degree"></span>
-                    <span class="unit"></span>
+                    <div class="temprature">
+                        <span class="degree temp">96 </span>
+                        <span class="unit temp"> &deg;C</span>
+                    </div>
                     <div class="details-info">
-                        <p class="feel"></p>
-                        <p class="wind"></p>
-                        <p class="humidity"></p>
+                        <p class="feel">FEELS LIKE: <span class="feels-degree">10</span> &deg;C</p>
+                        <p class="wind"> WIND: 5 MPH</p>
+                        <p class="humidity"> HUMIDITY: 10%</p>
                     </div>
                 </div>
             </div>
