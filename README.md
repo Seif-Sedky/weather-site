@@ -1,6 +1,7 @@
 # ☀️ Vinland Weather Site
 
 An **aesthetic, responsive weather app** built with **vanilla JavaScript, HTML, and CSS**, showcasing **API calls, Promises, and modular code** with Webpack bundling.
+
 ---
 
 ## 🖌️ Features
